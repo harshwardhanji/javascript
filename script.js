@@ -73,38 +73,40 @@ function getData() {
             }
             if (b.querySelector(".fadein") == null) {
                 b.setAttribute("class", "fadein");
+                var e=document.getElementById("About");
                 if (data.name == null) {
-                    document.getElementById("About").getElementsByClassName("Aname")[0].style.display = "none";
+                    
+                    e.getElementsByClassName("Aname")[0].style.display = "none";
 
                 } else {
-                    document.getElementById("About").getElementsByClassName("Aname")[0].style.display = "block";
-                    document.getElementById("About").getElementsByTagName("p")[0].innerHTML = data.name;
+                    e.getElementsByClassName("Aname")[0].style.display = "block";
+                    e.getElementsByTagName("p")[0].innerHTML = data.name;
                 }
                 if (data.location == null) {
-                    document.getElementById("About").getElementsByClassName("Alocation")[0].style.display = "none";
+                    e.getElementsByClassName("Alocation")[0].style.display = "none";
 
                 } else {
-                    document.getElementById("About").getElementsByClassName("Alocation")[0].style.display = "block";
-                    document.getElementById("About").getElementsByTagName("p")[1].innerHTML = data.location;
+                    e.getElementsByClassName("Alocation")[0].style.display = "block";
+                    e.getElementsByTagName("p")[1].innerHTML = data.location;
                 }
                 if (data.email == null) {
-                    document.getElementById("About").getElementsByClassName("Aemail")[0].style.display = "none";
+                    e.getElementsByClassName("Aemail")[0].style.display = "none";
                 } else {
-                    document.getElementById("About").getElementsByClassName("Aemail")[0].style.display = "block";
-                    document.getElementById("About").getElementsByTagName("p")[2].innerHTML = data.email;
+                    e.getElementsByClassName("Aemail")[0].style.display = "block";
+                    e.getElementsByTagName("p")[2].innerHTML = data.email;
                 }
                 if (data.blog == "") {
-                    document.getElementById("About").getElementsByClassName("Ablog")[0].style.display = "none";
+                    e.getElementsByClassName("Ablog")[0].style.display = "none";
 
                 } else {
-                    document.getElementById("About").getElementsByClassName("Ablog")[0].style.display = "block";
-                    document.getElementById("About").getElementsByTagName("p")[3].getElementsByTagName("a")[0].setAttribute("href", data.blog);
+                    e.getElementsByClassName("Ablog")[0].style.display = "block";
+                    e.getElementsByTagName("p")[3].getElementsByTagName("a")[0].setAttribute("href", data.blog);
                 }
                 if (data.company == null) {
-                    document.getElementById("About").getElementsByClassName("Acompany")[0].style.display = "none";
+                    e.getElementsByClassName("Acompany")[0].style.display = "none";
                 } else {
-                    document.getElementById("About").getElementsByClassName("Acompany")[0].style.display = "block";
-                    document.getElementById("About").getElementsByTagName("p")[4].getElementsByTagName("a")[0].setAttribute("href", data.company);
+                    e.getElementsByClassName("Acompany")[0].style.display = "block";
+                    e.getElementsByTagName("p")[4].getElementsByTagName("a")[0].setAttribute("href", data.company);
 
                 }
             }
