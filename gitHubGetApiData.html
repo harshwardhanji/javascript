@@ -1,0 +1,115 @@
+<html>
+
+<head>
+    <title>
+        Git hub details
+    </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id="page">
+        <div class="searchBox">
+            <div class="searchBoxInner">
+                <div class="formsearch">
+                    <input id="textBox" type="text" placeholder="Type Git Username.">
+
+                    <button type="button" value="search" name="btn" onclick="getData();" class="btn"><i
+                            class="fa fa-search icon"></i></button>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="container">
+            <div class=spinner>
+                <img src="loading.gif" alt="mypic"/>
+            </div>
+                
+            <div class="error">
+                <h1></h1>
+            </div>
+            <div class="info">
+                <div class="profile fadeout">
+                    <a><img class="profilepic" /></a>
+                    <div id="gitId">
+                    </div>
+                    <div class="follower">
+                        <a><i class="fas fa-users"></i>
+                        <br>
+                        followers <p></p></a>
+                    </div>
+                    <div class="following">
+                        <a><i class="fa fa-user" aria-hidden="true"></i><br>
+                        flwing<p></p></a>
+
+
+                    </div>
+                    <div class="clear"></div>
+
+                </div>
+                <div id="name">
+                    <a><h1></h1></a>
+                    <div id="bio" class="fadeout">
+
+                        <section class="padding">
+                            <h2>Bio</h2>
+                            <h3> </h3>
+                            <p> </p>
+                        </section>
+                    </div>
+
+                    <div id="repos" class="fadeout">
+
+                            <section class="padding">
+                                <h2>Repos</h2>
+                                
+                                
+                                <div class="rep"><h3>Public Repositories: </h3><i class="fas fa-save"></i><p><a> </a> </p></div>
+                            </section>
+                        </div>
+
+                    <div id="About" class="fadeout">
+                        <section class="padding">
+                            <h2>About</h2>
+                            <div class="Aname">
+                                <h3>Name: </h3>
+                                <p> </p>
+                            </div>
+                            <div class="Alocation">
+                                <h3>Location:</h3>
+                                <p></p>
+                            </div>
+                            <div class="Aemail">
+                                <h3>Email:</h3>
+                                <p></p>
+                            </div>
+
+                            <div class="Ablog">
+                                <h3>Blog:</h3>
+                                <p><a><i class="fas fa-blog"></i></a></p>
+                            </div>
+                            <div class="Acompany">
+                                <h3>Company:</h3>
+                                <p><a><i class='fas fa-city' style='color:red'></i></a></p>
+                            </div>
+
+                        </section>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/16a63e0e9b.js"></script>
+</body>
+
+</html>

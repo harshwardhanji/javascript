@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <title>
+        Check image width and height before uploading
+    </title>
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: table;
+        }
+
+        body {
+            margin: 0px;
+            background-image: url("img2.jpg");
+        }
+
+        .container {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        form {
+            display: table;
+            margin: auto;
+        }
+
+        #submi {
+            cursor: pointer;
+            color: white;
+        }
+
+        #submi::-webkit-file-upload-button {
+            background-color: #1ef0cd;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        input[type=submit] {
+            cursor: pointer;
+            background-color: #1ef0cd;
+            height: 40px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1 Style="color:white; text-align: center"> Please choose an image</h1>
+        <form action="check.php" method="post">
+            <input type="file" name="pic" accept="image/*" id="submi" onchange="checkWidthHeight(this.files)">
+            <input id="submit" type="submit">
+        </form>
+    </div>
+
+
+    <script>
+        function checkWidthHeight(files) {
+            url = window.URL.createObjectURL(files[0]);
+            function imgData(url, imgCallback) {
+                var img = new Image();
+                img.src = url;
+                img.onload = function () { imgCallback(this.width, this.height); }
+            }
+            console.log(url);
+            imgData(
+                url, function (width, height) {
+                    if (width < 600) {
+                        console.log(width);
+                        alert("please insert new image width is less than 600");
+                    }
+                    else if (width > 600) {
+                        alert("crop it width is higher than 600");
+                    }
+                    else {
+                        alert("correct width");
+                    }
+                }
+            );
+        }
+
+    </script>
+</body>
+
+</html>
