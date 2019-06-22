@@ -112,9 +112,9 @@ function getData() {
             }
             if (c.querySelector(".fadein") == null) {
                 c.setAttribute("class", "fadein");
-                document.getElementById("repos").getElementsByTagName("p")[0].getElementsByTagName("a")[0].innerHTML = data.public_repos;
-                document.getElementById("repos").getElementsByTagName("p")[0].getElementsByTagName("a")[0].setAttribute("href", data.html_url + "?tab=repositories");
-
+                c.getElementsByTagName("p")[0].getElementsByTagName("a")[0].innerHTML = data.public_repos;
+                c.getElementsByTagName("p")[0].getElementsByTagName("a")[0].setAttribute("href", data.html_url + "?tab=repositories");
+                c.getElementsByTagName("p")[1].innerHTML=data.updated_at.slice(0,10);
             }
         }, 2000);
 
